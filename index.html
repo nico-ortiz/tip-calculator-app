@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!--Links to CSS files-->
+  <link rel="stylesheet" href="development/css/variables.css">
+  <link rel="stylesheet" href="development/css/styles.css">
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <img class="logo" src="images/logo.svg" alt="logo">
+  </header>
+  <!--Main container-->
+  <main class="main-container">
+    <!--First section-->
+    <section class="values-container grid-item">
+      <!--First item of grid-->
+      <div class="item-values-container lbl-inp">
+        <label class="labels" for="total-input">Bill</label>
+        <input id="total-input-value" class="inputs" type="number">
+      </div>
+      <!--Second item of grid-->
+      <div class="item-values-container snd-item-container">
+        <label class="labels" for="btns-container">Select Tip %</label>
+        <div id="btns-container" class="percent-btns-container">
+          <button class="percent-btns" value="5">5%</button>
+          <button class="percent-btns" value="10">10%</button>
+          <button class="percent-btns" value="15">15%</button>
+          <button class="percent-btns" value="25">25%</button>
+          <button class="percent-btns" value="50">50%</button>
+          <button class="percent-btns custom-btn" value="custom">Custom</button>
+        </div>
+      </div>
+      <!--Third item of grid-->
+      <div class="item-values-container lbl-inp">
+        <label class="labels" for="number-of-people">Number of People</label>
+        <input id="number-of-people" class="inputs" type="number">
+      </div>
+    </section>
+    <!--Second section-->
+    <section class="results grid-item">
+      <div class="amounts-container">
+        <div class="paraphs">
+          <p class="title">Tip Amount</p>
+          <p class="subt">/ person</p>
+        </div>
+        <span id="tip-amount-total" class="amounts">&dollar;22</span>
+      </div>
+      <div class="amounts-container">
+        <div class="paraphs">
+          <p class="title">Total</p>
+          <p class="subt">/ person</p>
+        </div>
+        <span id="amount-p-person" class="amounts">&dollar;12</span>
+      </div>
+      <button class="reset-btn">RESET</button>
+    </section>
+  </main>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+</body>
+</html>

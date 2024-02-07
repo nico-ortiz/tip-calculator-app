@@ -1,0 +1,171 @@
+/*Styles logo header*/
+
+.header .logo {
+    width: 87px;    
+    height: 54px;
+    margin-bottom: 50px;
+}
+
+/*Styles for main container*/
+
+.main-container {
+    display: grid;
+    grid-template-areas: 
+        "one two";
+    gap: 30px;
+
+    width: min(60%, 1000px);
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+/*Set */
+.main-container .grid-item:nth-child(1) {
+    grid-area: one;
+}
+
+.main-container .grid-item:nth-child(2) {
+    grid-area: two;
+}
+
+/* Styles for first section of main-container*/
+.main-container .values-container {
+    display: grid;
+    grid-template-areas: 
+        "one"
+        "two"
+        "three";
+}
+
+.main-container .values-container .item-values-container:nth-child(1) {
+    grid-area: one;
+}
+
+.main-container .values-container .item-values-container:nth-child(2) {
+    grid-area: two;
+    margin-top: 20px;
+}
+
+.main-container .values-container .item-values-container:nth-child(3) {
+    grid-area: three;
+    margin-top: 30px;
+}
+
+/* Styles for label-input in first item*/
+.main-container .values-container .lbl-inp > label {
+    display: block;
+}
+
+.main-container .values-container .item-values-container .labels {
+    color: var(--dark-grayish-cyan);
+    font-size: .6rem;
+    margin-bottom: 5px;
+}
+
+.main-container .values-container .item-values-container .inputs {
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    width: 100%;
+    border-radius: 5px;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    color: var(--very-dark-cyan);
+}
+
+/*Styles for set of percent buttons*/
+.main-container .values-container .snd-item-container #btns-container {
+    display: grid;    
+    grid-template-areas: 
+        "one two three"
+        "four five six";
+    gap: 10px;
+    grid-auto-columns: 1fr;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(1) {
+    grid-area: one;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(2) {
+    grid-area: two;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(3) {
+    grid-area: three;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(4) {
+    grid-area: four;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(5) {
+    grid-area: five;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(6) {
+    grid-area: six;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-grayish-cyan);
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns {
+    background-color: var(--very-dark-cyan);    
+    color: var(--white);
+    font-size: .7rem;
+    font-family: 'Space Mono', monospace;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 0;
+    cursor: pointer;
+}
+
+.main-container .values-container .snd-item-container #btns-container .percent-btns:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+
+
+/* Styles for second section of main-container*/
+.main-container .results {
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.main-container .results .amounts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-container .results .amounts-container .paraphs .title {
+    font-size: .6rem;
+    color: var(--very-light-grayish-cyan);
+}
+
+.main-container .results .amounts-container .paraphs .subt {
+    font-size: .4rem;
+    color: var(--grayish-cyan);
+}
+
+.main-container .results .amounts-container .amounts {
+    color: var(--strong-cyan);
+    font-size: 1.5rem;
+}
+
+.main-container .results .reset-btn {
+    width: 100%;
+    color: var(--dark-grayish-cyan);
+    background-color: var(--dark-grayish-cyan);
+    border: none;
+    border-radius: 2px;
+    font-size: .6rem;
+    font-weight: 700;
+    padding: 10px 0;
+} 
+
+/*AGREGAR DETALLES, COLOR EN BOTON RESET*/
