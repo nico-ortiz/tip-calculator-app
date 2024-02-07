@@ -27,25 +27,29 @@
     <section class="values-container grid-item">
       <!--First item of grid-->
       <div class="item-values-container lbl-inp">
-        <label class="labels" for="total-input">Bill</label>
-        <input id="total-input-value" class="inputs" type="number">
+        <label class="labels" for="bill-value">Bill</label>
+        <input id="bill-value" class="inputs" type="number" placeholder="0">
       </div>
       <!--Second item of grid-->
       <div class="item-values-container snd-item-container">
-        <label class="labels" for="btns-container">Select Tip %</label>
+        <p class="labels">Select Tip %</p>
         <div id="btns-container" class="percent-btns-container">
-          <button class="percent-btns" value="5">5%</button>
-          <button class="percent-btns" value="10">10%</button>
-          <button class="percent-btns" value="15">15%</button>
-          <button class="percent-btns" value="25">25%</button>
-          <button class="percent-btns" value="50">50%</button>
-          <button class="percent-btns custom-btn" value="custom">Custom</button>
+          <button name="submit-btn" class="percent-btns" value="5">5%</button>
+          <button name="submit-btn" class="percent-btns" value="10">10%</button>
+          <button name="submit-btn" class="percent-btns" value="15">15%</button>
+          <button name="submit-btn" class="percent-btns" value="25">25%</button>
+          <button name="submit-btn" class="percent-btns" value="50">50%</button>
+          <button name="submit-btn" class="percent-btns custom-btn" value="custom">Custom</button>
         </div>
       </div>
       <!--Third item of grid-->
       <div class="item-values-container lbl-inp">
         <label class="labels" for="number-of-people">Number of People</label>
-        <input id="number-of-people" class="inputs" type="number">
+        <input id="number-of-people" 
+          class="inputs"
+          type="number"
+          maxlength="9"
+          placeholder="0">
       </div>
     </section>
     <!--Second section-->
@@ -55,14 +59,18 @@
           <p class="title">Tip Amount</p>
           <p class="subt">/ person</p>
         </div>
-        <span id="tip-amount-total" class="amounts">&dollar;22</span>
+        <span class="amounts">
+          <span>&dollar;</span><span id="tip-amount-total">0.00</span>
+        </span>
       </div>
       <div class="amounts-container">
         <div class="paraphs">
           <p class="title">Total</p>
           <p class="subt">/ person</p>
         </div>
-        <span id="amount-p-person" class="amounts">&dollar;12</span>
+        <span id="amount-p-person" class="amounts">
+          <span>&dollar;</span><span id="amount-p-person">0.00</span>
+        </span>
       </div>
       <button class="reset-btn">RESET</button>
     </section>
@@ -71,5 +79,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>-->
+  <script src="./development/script.js"></script>
 </body>
 </html>
