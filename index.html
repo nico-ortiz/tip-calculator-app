@@ -34,12 +34,14 @@
       <div class="item-values-container snd-item-container">
         <p class="labels">Select Tip %</p>
         <div id="btns-container" class="percent-btns-container">
-          <button name="submit-btn" class="percent-btns" value="5">5%</button>
-          <button name="submit-btn" class="percent-btns" value="10">10%</button>
-          <button name="submit-btn" class="percent-btns" value="15">15%</button>
-          <button name="submit-btn" class="percent-btns" value="25">25%</button>
-          <button name="submit-btn" class="percent-btns" value="50">50%</button>
-          <button name="submit-btn" class="percent-btns custom-btn" value="custom">Custom</button>
+          <div name="submit-btn" class="percent-btns">5%</div>
+          <div name="submit-btn" class="percent-btns">10%</div>
+          <div name="submit-btn" class="percent-btns">15%</div>
+          <div name="submit-btn" class="percent-btns">25%</div>
+          <div name="submit-btn" class="percent-btns">50%</div>
+          <div id="custom-btn">
+            <input id="input-custom" type="number" min="1" max="100" class="inputs" placeholder="Custom">
+          </div>
         </div>
       </div>
       <!--Third item of grid-->
@@ -73,7 +75,7 @@
           <span id="amount-p-person"></span>
         </span>
       </div>
-      <button class="reset-btn">RESET</button>
+      <div class="reset-btn">RESET</div>
     </section>
   </main>
   <!--<div class="attribution">

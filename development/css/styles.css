@@ -94,7 +94,9 @@
 }
 
 .main-container .values-container .item-values-container .inputs::-webkit-outer-spin-button,
-.main-container .values-container .item-values-container .inputs::-webkit-inner-spin-button {
+.main-container .values-container .item-values-container .inputs::-webkit-inner-spin-button,
+.main-container .snd-item-container #btns-container #custom-btn #input-custom::-webkit-outer-spin-button, 
+.main-container .snd-item-container #btns-container #custom-btn #input-custom::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
@@ -135,8 +137,6 @@
 
 .main-container .values-container .snd-item-container #btns-container .percent-btns:nth-child(6) {
     grid-area: six;
-    background-color: var(--very-light-grayish-cyan);
-    color: var(--dark-grayish-cyan);
 }
 
 .main-container .values-container .snd-item-container #btns-container .percent-btns {
@@ -148,14 +148,21 @@
     border-radius: 5px;
     padding: 7px 0;
     cursor: pointer;
+    text-align: center;
 }
+
+.main-container .values-container .snd-item-container #btns-container #custom-btn #input-custom {
+    font-size: .8rem;
+    outline: none;
+    text-align: center;
+}
+
+
 
 .main-container .values-container .snd-item-container #btns-container .percent-btns:hover {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
-
-
 
 /* Styles for second section of main-container*/
 .main-container .results {
