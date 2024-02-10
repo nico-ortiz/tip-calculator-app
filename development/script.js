@@ -1,61 +1,35 @@
-let billValueInput = document.getElementById('bill-value');
-let percentBtns = document.querySelectorAll('.percent-btns');
-let numberOfPeopleInput = document.getElementById('number-of-people');
+const billInput = document.getElementById('bill-value');
+const percentBtns = document.querySelectorAll('.percent-btns');
+const numberOfPeopleInput = document.getElementById('number-of-people');
 
-let tipAmountTotal = document.getElementById('tip-amount-total');
-let amountPerPerson = document.getElementById('amount-p-person');
+const tipAmountTotal = document.getElementById('tip-amount-total');
+const amountPerPerson = document.getElementById('amount-p-person');
 
-let billValue = 0;
-let percentTip = 0;
-let numberOfPeople = 0;
+let billValue = 0.0;
+let numberOfPeopleValue = 0;
+let percentBtnValue = 0;
+tipAmountTotal.innerHTML = '$' + (0.0).toFixed(2);
+amountPerPerson.innerHTML = '$' + (0.0).toFixed(2);
 
-/**
- * Load inputs (bill, percent tip, number of people)
- */
-function loadData() {
-    return new Promise((resolve) => {
-        let results = [];
 
-        function handleBillInput(event) {
-            billValue = event.target.value;
-            results.push(billValue);
-            checkAndResolve();
-        }
+billInput.addEventListener('input', billHandle);
+numberOfPeopleInput.addEventListener('input', numberOfPeopleHandle);
+percentBtns.forEach((btn) => {
+    btn.addEventListener('click', percentBtnsHandle);
+});
 
-        function handlePercentBtnClick(event) {
-            percentTip = event.target.value;
-            results.push(percentTip);
-            checkAndResolve();
-        }
-
-        function handlePeopleInput(event) {
-            numberOfPeople = event.target.value;
-            results.push(numberOfPeople);
-            checkAndResolve();
-        }
-
-        function checkAndResolve() {
-            if (results.length === 3)
-                return resolve(results);
-        }
-
-        billValueInput.addEventListener('input', handleBillInput);
-    
-        percentBtns.forEach((btn) => {
-            btn.addEventListener('click', handlePercentBtnClick);
-        });
-    
-        numberOfPeopleInput.addEventListener('input', handlePeopleInput);
-    })
-};
-
-async function finalResults() {
-    try {
-        const results = await loadData();
-        console.log(results[0] + " . " + results[1] + " . " + results[2]);         
-    } catch (error) {
-        console.log(error);
-    }
+function billHandle() {
+    billValue = parseFloat(billInput.value);
+    console.log(billValue);
 }
 
-finalResults();
+function numberOfPeopleHandle() {
+    numberOfPeopleValue = parseFloat(numberOfPeopleInput.value);
+    console.log(numberOfPeopleValue);
+}
+
+function percentBtnsHandle(event) {
+    percentBtnValue = event.target.value;
+    console.log(percentBtnValue);
+}
+

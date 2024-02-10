@@ -48,7 +48,8 @@
         <input id="number-of-people" 
           class="inputs"
           type="number"
-          maxlength="9"
+          min="0"
+          max="99999999"
           placeholder="0">
       </div>
     </section>
@@ -60,7 +61,7 @@
           <p class="subt">/ person</p>
         </div>
         <span class="amounts">
-          <span>&dollar;</span><span id="tip-amount-total">0.00</span>
+          <span id="tip-amount-total"></span>
         </span>
       </div>
       <div class="amounts-container">
@@ -69,7 +70,7 @@
           <p class="subt">/ person</p>
         </div>
         <span class="amounts">
-          <span>&dollar;</span><span id="amount-p-person">0.00</span>
+          <span id="amount-p-person"></span>
         </span>
       </div>
       <button class="reset-btn">RESET</button>
