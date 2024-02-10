@@ -157,8 +157,6 @@
     text-align: center;
 }
 
-
-
 .main-container .values-container .snd-item-container #btns-container .percent-btns:hover {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
@@ -169,6 +167,8 @@
     background-color: var(--very-dark-cyan);
     border-radius: 15px;
     padding: 30px;
+    max-width: 350px;
+    width: 100%;
 }
 
 .main-container .results .amounts-container {
@@ -194,12 +194,26 @@
     font-size: 1.3rem;
 }
 
+.main-container .results .amounts-container .amounts #tip-amount-total {
+    display: block;
+    max-width: 180px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-container .results .amounts-container .amounts #amount-p-person {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .main-container .results .amounts-container .amounts .dollar-amount {
     width: 18px;
     color: var(--strong-cyan);
 }
 
-.main-container .results .reset-btn {
+.main-container .results #reset-btn {
     width: 100%;
     color: var(--very-dark-cyan);
     background-color: var(--dark-grayish-cyan);
@@ -210,8 +224,10 @@
     padding: 10px 0;
     margin-top: 60px;
     border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
 } 
 
-.main-container .results .reset-btn:hover {
+.main-container .results #reset-btn:hover {
     background-color: var(--strong-cyan);
 }

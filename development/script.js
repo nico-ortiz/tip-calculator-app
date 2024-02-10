@@ -7,12 +7,14 @@ const percentCustom = document.getElementById('input-custom');
 const tipAmountTotal = document.getElementById('tip-amount-total');
 const amountPerPerson = document.getElementById('amount-p-person');
 
+const resetBtn = document.getElementById('reset-btn');
+
 /* This variables represent bill, select tip% and number of people */
 let billValue = 0.0;
 let numberOfPeopleValue = 1;
 let percentBtnValue = 0;
 
-/* Initial setting for tip amount per person and total per person */
+/* Initial setting for tip amount per person and total per person */    
 tipAmountTotal.innerHTML = '$' + (0.0).toFixed(2);
 amountPerPerson.innerHTML = '$' + (0.0).toFixed(2);
 
@@ -26,6 +28,8 @@ percentBtns.forEach((btn) => {
 });
 
 percentCustom.addEventListener('input', percentCustomHandle);
+
+resetBtn.addEventListener('click', resetBtnHandle);
 
 function billHandle() {
     billValue = parseFloat(billInput.value);
@@ -52,6 +56,15 @@ function percentCustomHandle() {
         percentBtnValue = percent / 100;
         calculateTipAmount();
     }
+}
+
+function resetBtnHandle() {
+    document.getElementById('bill-value').value = '';
+    document.getElementById('number-of-people').value = '';
+    document.querySelectorAll('.percent-btns').forEach(elem => elem.value = '');
+    document.getElementById('input-custom').value = '';
+    tipAmountTotal.innerHTML = '$' + (0.0).toFixed(2);
+    amountPerPerson.innerHTML = '$' + (0.0).toFixed(2);
 }
 
 /* Function to calculate tip amount per person and total per person */
