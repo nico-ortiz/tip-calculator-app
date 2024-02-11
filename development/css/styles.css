@@ -22,6 +22,10 @@
     border-radius: 20px;
 }
 
+.main-container .grid-item {
+    margin: 5px;
+}
+
 /*Set */
 .main-container .grid-item:nth-child(1) {
     grid-area: one;
@@ -75,6 +79,12 @@
     font-family: 'Space Mono', monospace;
     font-size: 1rem;
     color: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+.main-container .values-container .item-values-container .inputs:focus {
+    outline: none !important;
+    border: 2px solid var(--strong-cyan);
 }
 
 .main-container .values-container .item-values-container #bill-value {
@@ -151,10 +161,14 @@
     text-align: center;
 }
 
+.main-container .values-container .snd-item-container #btns-container #custom-btn {
+    background-color: var(--very-light-grayish-cyan);
+}
+
 .main-container .values-container .snd-item-container #btns-container #custom-btn #input-custom {
     font-size: .8rem;
     outline: none;
-    text-align: center;
+    text-align: right;
 }
 
 .main-container .values-container .snd-item-container #btns-container .percent-btns:hover {
@@ -230,4 +244,90 @@
 
 .main-container .results #reset-btn:hover {
     background-color: var(--strong-cyan);
+}
+
+
+@media only screen and (width <= 768px) {
+    .main-container {
+        width: 90%;
+    }
+
+    .main-container .results .amounts-container .amounts {
+        font-size: 1rem;
+    }
+
+    .main-container .results .amounts-container .amounts #tip-amount-total {
+        width: 100%;
+        max-width: 130px;
+        text-align: right;
+    }
+
+    .main-container .results .amounts-container .amounts #amount-p-person {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .main-container .values-container .snd-item-container #btns-container #custom-btn #input-custom {
+        font-size: .7rem;
+    }
+}
+
+@media only screen and (width < 768px) {
+    body {
+        justify-content: space-between;
+    }
+
+    .header .logo {
+        margin: 30px 0;
+    }
+    
+    .main-container {
+        grid-template-areas: 
+            "one"
+            "two";
+        grid-template-rows: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-container .results {
+        max-width: 100%;
+    }
+
+    .main-container .values-container .snd-item-container #btns-container {
+        grid-template-areas: 
+            "one two"
+            "three four"
+            "five six";
+    }
+
+    .main-container .results #reset-btn {
+        margin: 0;
+    }
+}
+
+@media only screen and (width = 425px) {
+    .main-container .results .amounts-container .amounts #tip-amount-total {
+        width: 100%;
+        max-width: 220px;
+        text-align: right;
+    }
+
+    .main-container .results .amounts-container .amounts #amount-p-person {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+@media only screen and (width < 425px) {
+    .main-container .results .amounts-container .amounts #tip-amount-total {
+        width: 100%;
+        max-width: 180px;
+        text-align: right;
+    }
+
+    .main-container .results .amounts-container .amounts #amount-p-person {
+        width: 100%;
+        max-width: 220px;
+    }
 }
