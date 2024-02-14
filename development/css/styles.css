@@ -75,6 +75,7 @@
     font-size: 1rem;
     color: var(--very-dark-cyan);
     cursor: pointer;
+    height: 40px;
 }
 
 .main-container .values-container .item-values-container .inputs:focus {
