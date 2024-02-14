@@ -22,10 +22,6 @@
     border-radius: 20px;
 }
 
-.main-container .grid-item {
-    margin: 5px;
-}
-
 /*Set */
 .main-container .grid-item:nth-child(1) {
     grid-area: one;
@@ -45,17 +41,16 @@
 }
 
 .main-container .values-container .item-values-container:nth-child(1) {
-    grid-area: one;
+    grid-area: one;    
 }
 
 .main-container .values-container .item-values-container:nth-child(2) {
     grid-area: two;
-    margin-top: 20px;
+    margin: 30px 0;
 }
 
 .main-container .values-container .item-values-container:nth-child(3) {
     grid-area: three;
-    margin-top: 30px;
 }
 
 /* Styles for label-input in first item*/
@@ -84,7 +79,7 @@
 
 .main-container .values-container .item-values-container .inputs:focus {
     outline: none !important;
-    border: 2px solid var(--strong-cyan);
+    border: 1px solid var(--strong-cyan);
 }
 
 .main-container .values-container .item-values-container #bill-value {
@@ -236,7 +231,7 @@
     font-size: .6rem;
     font-weight: 700;
     padding: 10px 0;
-    margin-top: 60px;
+    margin-top: 90px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
